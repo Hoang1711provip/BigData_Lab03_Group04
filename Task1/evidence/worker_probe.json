@@ -1,0 +1,126 @@
+{
+  "partition_tasks": [
+    {
+      "host": "Macbook-Air-M3.local",
+      "pid": 14183,
+      "partition": 0
+    },
+    {
+      "host": "Macbook-Air-M3.local",
+      "pid": 14184,
+      "partition": 1
+    },
+    {
+      "host": "Macbook-Air-M3.local",
+      "pid": 14184,
+      "partition": 2
+    },
+    {
+      "host": "Macbook-Air-M3.local",
+      "pid": 14183,
+      "partition": 3
+    },
+    {
+      "host": "Macbook-Air-M3.local",
+      "pid": 14184,
+      "partition": 4
+    },
+    {
+      "host": "Macbook-Air-M3.local",
+      "pid": 14183,
+      "partition": 5
+    },
+    {
+      "host": "Macbook-Air-M3.local",
+      "pid": 14184,
+      "partition": 6
+    },
+    {
+      "host": "Macbook-Air-M3.local",
+      "pid": 14183,
+      "partition": 7
+    },
+    {
+      "host": "Macbook-Air-M3.local",
+      "pid": 14184,
+      "partition": 8
+    },
+    {
+      "host": "Macbook-Air-M3.local",
+      "pid": 14183,
+      "partition": 9
+    },
+    {
+      "host": "Macbook-Air-M3.local",
+      "pid": 14183,
+      "partition": 10
+    },
+    {
+      "host": "Macbook-Air-M3.local",
+      "pid": 14184,
+      "partition": 11
+    },
+    {
+      "host": "Macbook-Air-M3.local",
+      "pid": 14184,
+      "partition": 12
+    },
+    {
+      "host": "Macbook-Air-M3.local",
+      "pid": 14183,
+      "partition": 13
+    },
+    {
+      "host": "Macbook-Air-M3.local",
+      "pid": 14183,
+      "partition": 14
+    },
+    {
+      "host": "Macbook-Air-M3.local",
+      "pid": 14184,
+      "partition": 15
+    },
+    {
+      "host": "Macbook-Air-M3.local",
+      "pid": 14183,
+      "partition": 16
+    },
+    {
+      "host": "Macbook-Air-M3.local",
+      "pid": 14184,
+      "partition": 17
+    },
+    {
+      "host": "Macbook-Air-M3.local",
+      "pid": 14184,
+      "partition": 18
+    },
+    {
+      "host": "Macbook-Air-M3.local",
+      "pid": 14183,
+      "partition": 19
+    },
+    {
+      "host": "Macbook-Air-M3.local",
+      "pid": 14183,
+      "partition": 20
+    },
+    {
+      "host": "Macbook-Air-M3.local",
+      "pid": 14184,
+      "partition": 21
+    },
+    {
+      "host": "Macbook-Air-M3.local",
+      "pid": 14184,
+      "partition": 22
+    },
+    {
+      "host": "Macbook-Air-M3.local",
+      "pid": 14183,
+      "partition": 23
+    }
+  ],
+  "distinct_hosts": 1,
+  "interpretation": "Distinct hosts demonstrate placements, not distinct physical servers. Keep Spark UI/event-log evidence too."
+}
