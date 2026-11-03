@@ -1,0 +1,13 @@
+{
+  "run_id": "044a9b13-569f-4cf7-9192-863adc149e97",
+  "job": "bootstrap",
+  "status": "COMPLETE",
+  "input_manifest_sha256": "3cdfc84b26d290100b39ce65d4ff7cb22839f4021b9caf26897c8a4ff68091a2",
+  "implementation_sha256": "4b883e0549376c4f868f1febdb1fe6e5a6f8e1fa5ef136aa8dfa8dfd70165770",
+  "scaffold_sha256": "fbe3873b5a7203888afe3c4d8e0fb7bf61d990083568f08f35957feefe23ac49",
+  "outputs": [
+    "/home/dokiet06/lab3-lakehouse/group04/kiet-20261103T152215Z/tables/bronze",
+    "/home/dokiet06/lab3-lakehouse/group04/kiet-20261103T152215Z/tables/silver",
+    "/home/dokiet06/lab3-lakehouse/group04/kiet-20261103T152215Z/tables/gold"
+  ]
+}

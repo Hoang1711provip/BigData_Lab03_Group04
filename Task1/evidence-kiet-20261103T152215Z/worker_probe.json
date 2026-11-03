@@ -1,0 +1,126 @@
+{
+  "partition_tasks": [
+    {
+      "host": "LAPTOP-A7IKKPEP",
+      "pid": 1056,
+      "partition": 0
+    },
+    {
+      "host": "LAPTOP-A7IKKPEP",
+      "pid": 1057,
+      "partition": 1
+    },
+    {
+      "host": "LAPTOP-A7IKKPEP",
+      "pid": 1056,
+      "partition": 2
+    },
+    {
+      "host": "LAPTOP-A7IKKPEP",
+      "pid": 1057,
+      "partition": 3
+    },
+    {
+      "host": "LAPTOP-A7IKKPEP",
+      "pid": 1057,
+      "partition": 4
+    },
+    {
+      "host": "LAPTOP-A7IKKPEP",
+      "pid": 1056,
+      "partition": 5
+    },
+    {
+      "host": "LAPTOP-A7IKKPEP",
+      "pid": 1057,
+      "partition": 6
+    },
+    {
+      "host": "LAPTOP-A7IKKPEP",
+      "pid": 1056,
+      "partition": 7
+    },
+    {
+      "host": "LAPTOP-A7IKKPEP",
+      "pid": 1057,
+      "partition": 8
+    },
+    {
+      "host": "LAPTOP-A7IKKPEP",
+      "pid": 1056,
+      "partition": 9
+    },
+    {
+      "host": "LAPTOP-A7IKKPEP",
+      "pid": 1057,
+      "partition": 10
+    },
+    {
+      "host": "LAPTOP-A7IKKPEP",
+      "pid": 1056,
+      "partition": 11
+    },
+    {
+      "host": "LAPTOP-A7IKKPEP",
+      "pid": 1057,
+      "partition": 12
+    },
+    {
+      "host": "LAPTOP-A7IKKPEP",
+      "pid": 1056,
+      "partition": 13
+    },
+    {
+      "host": "LAPTOP-A7IKKPEP",
+      "pid": 1057,
+      "partition": 14
+    },
+    {
+      "host": "LAPTOP-A7IKKPEP",
+      "pid": 1056,
+      "partition": 15
+    },
+    {
+      "host": "LAPTOP-A7IKKPEP",
+      "pid": 1057,
+      "partition": 16
+    },
+    {
+      "host": "LAPTOP-A7IKKPEP",
+      "pid": 1056,
+      "partition": 17
+    },
+    {
+      "host": "LAPTOP-A7IKKPEP",
+      "pid": 1057,
+      "partition": 18
+    },
+    {
+      "host": "LAPTOP-A7IKKPEP",
+      "pid": 1056,
+      "partition": 19
+    },
+    {
+      "host": "LAPTOP-A7IKKPEP",
+      "pid": 1056,
+      "partition": 20
+    },
+    {
+      "host": "LAPTOP-A7IKKPEP",
+      "pid": 1057,
+      "partition": 21
+    },
+    {
+      "host": "LAPTOP-A7IKKPEP",
+      "pid": 1057,
+      "partition": 22
+    },
+    {
+      "host": "LAPTOP-A7IKKPEP",
+      "pid": 1056,
+      "partition": 23
+    }
+  ],
+  "distinct_hosts": 1,
+  "interpretation": "Distinct hosts demonstrate placements, not distinct physical servers. Keep Spark UI/event-log evidence too."
+}

@@ -1,0 +1,20 @@
+{
+  "verification_scope": "Saved exports and incoming transport; not live Delta reads",
+  "incoming_rows": 140,
+  "incoming_winners": 130,
+  "superseded_revisions": 10,
+  "baseline_rows": 9610,
+  "final_rows": 9710,
+  "decisions_for_incoming_keys": {
+    "UPDATE": 20,
+    "NEWER_TIMESTAMP": 20,
+    "KEEP": 10,
+    "STALE_TIMESTAMP": 10,
+    "INSERT": 100,
+    "NEW_KEY": 100
+  },
+  "baseline_keys_not_in_batch": 9580,
+  "full_silver_comparison_passed": true,
+  "replay_export_comparison_passed": true,
+  "historical_export_comparison_passed": true
+}

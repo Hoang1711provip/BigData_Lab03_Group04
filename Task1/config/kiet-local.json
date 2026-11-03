@@ -1,0 +1,11 @@
+{
+  "group_id": "group04",
+  "run_label": "kiet-20261103T152215Z",
+  "store_id": "local-course-fixture",
+  "spark_master": "local[2]",
+  "lakehouse_root": "/home/dokiet06/lab3-lakehouse",
+  "evidence_dir": "evidence-kiet-20261103T152215Z",
+  "shuffle_partitions": 8,
+  "benchmark_copies": 100,
+  "extra_maven_packages": []
+}

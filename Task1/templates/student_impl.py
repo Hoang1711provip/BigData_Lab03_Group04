@@ -4,6 +4,7 @@ All functions operate on Spark DataFrames except validate_release_binding.
 """
 from pyspark.sql import functions as F
 from pyspark.sql.window import Window
+from delta.tables import DeltaTable
 
 def build_gold(silver_df):
     gold_df = (
@@ -91,13 +92,31 @@ def choose_revisions(changes_df):
     return winners_df
 
 def merge_silver(spark, silver_path, winners_df):
-    """TODO 3 (T3). Mutate an existing Delta table; return None.
-    Match by record_id. Update only if the incoming row precedes the stored
-    row in the SAME ordering as TODO 2; insert missing business keys.
-    Equal provenance and ingest timestamp is a no-op. Stale data must not
-    replace a newer value. The runner validates the WHOLE batch first.
+    source = winners_df.withColumn(
+        "event_date",
+        F.to_date("event_time_utc"),
+    )
+
+    update_condition = """
+        s.ingest_time_utc > t.ingest_time_utc
+        OR (
+            s.ingest_time_utc = t.ingest_time_utc
+            AND s.source_object < t.source_object
+        )
+        OR (
+            s.ingest_time_utc = t.ingest_time_utc
+            AND s.source_object = t.source_object
+            AND s.source_row < t.source_row
+        )
     """
-    raise NotImplementedError('TODO 3: merge_silver')
+
+    (
+        DeltaTable.forPath(spark, silver_path).alias("t")
+        .merge(source.alias("s"), "t.record_id = s.record_id")
+        .whenMatchedUpdateAll(condition=update_condition)
+        .whenNotMatchedInsertAll()
+        .execute()
+    )
 
 
 def benchmark_query(df):

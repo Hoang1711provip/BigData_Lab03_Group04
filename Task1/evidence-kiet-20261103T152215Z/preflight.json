@@ -1,0 +1,7 @@
+{
+  "status": "PASS",
+  "delta_smoke_path": "/home/dokiet06/lab3-lakehouse/group04/kiet-20261103T152215Z/preflight-8d0e6311-ff71-4ce9-a958-2c109c305fc0",
+  "fixture_rows": 9610,
+  "new_batch_rows": 140,
+  "implementation_file": "student_impl.py"
+}
