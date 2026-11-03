@@ -2,29 +2,93 @@
 Use the function signatures exactly: src/run_lab.py imports this module.
 All functions operate on Spark DataFrames except validate_release_binding.
 """
+from pyspark.sql import functions as F
+from pyspark.sql.window import Window
 
 def build_gold(silver_df):
-    """TODO 1 (T2). Group by site and UTC event_date.
-    Return exactly these columns:
-      site, event_date, n_observations, sum_temperature_c,
-      mean_temperature_c, min_temperature_c, max_temperature_c,
-      n_late, late_rate, n_above_25, n_sensors.
-    Use count of observations; SUM / COUNT for the mean; temperature > 25
-    (strict inequality); COUNT(DISTINCT sensor_id); late flag as 0/1.
-    Cast sums/min/max to decimal(18,2), mean/rate to decimal(18,6).
-    No collect(), Pandas, Python UDF, or reference-sample join here.
-    """
-    raise NotImplementedError('TODO 1: build_gold')
+    gold_df = (
+        silver_df
+        .groupBy("site", "event_date")
+        .agg(
+            F.count("*")
+             .cast("BIGINT")
+             .alias("n_observations"),
+
+            F.sum("temperature_c")
+             .cast("DECIMAL(18,2)")
+             .alias("sum_temperature_c"),
+
+            (
+                F.sum("temperature_c") / F.count("*")
+            ).cast("DECIMAL(18,6)")
+             .alias("mean_temperature_c"),
+
+            F.min("temperature_c")
+             .cast("DECIMAL(18,2)")
+             .alias("min_temperature_c"),
+
+            F.max("temperature_c")
+             .cast("DECIMAL(18,2)")
+             .alias("max_temperature_c"),
+
+            F.sum(
+                F.when(F.col("is_late") == True, 1).otherwise(0)
+            ).cast("BIGINT")
+             .alias("n_late"),
+
+            F.sum(
+                F.when(F.col("temperature_c") > 25, 1).otherwise(0)
+            ).cast("BIGINT")
+             .alias("n_above_25"),
+
+            F.countDistinct("sensor_id")
+             .cast("BIGINT")
+             .alias("n_sensors")
+        )
+    )
+
+    gold_df = gold_df.withColumn(
+        "late_rate",
+        (
+            F.col("n_late") / F.col("n_observations")
+        ).cast("DECIMAL(18,6)")
+    )
+
+    return gold_df.select(
+        "site",
+        "event_date",
+        "n_observations",
+        "sum_temperature_c",
+        "mean_temperature_c",
+        "min_temperature_c",
+        "max_temperature_c",
+        "n_late",
+        "late_rate",
+        "n_above_25",
+        "n_sensors"
+    )
+
 
 
 def choose_revisions(changes_df):
-    """TODO 2 (T3). Exactly one incoming row per record_id.
-    Ordering: ingest_time_utc DESC, source_object ASC, source_row ASC.
-    Use a deterministic Window and ROW_NUMBER. Return original columns;
-    do not leak the helper rank column into a Delta table.
-    """
-    raise NotImplementedError('TODO 2: choose_revisions')
+    window_spec = (
+        Window
+        .partitionBy("record_id")
+        .orderBy(
+            F.col("ingest_time_utc").desc(),
+            F.col("source_object").asc(),
+            F.col("source_row").asc()
+        )
+    )
 
+    winners_df = (
+        changes_df
+        .withColumn("_revision_rank", F.row_number().over(window_spec))
+        .filter(F.col("_revision_rank") == 1)
+        .drop("_revision_rank")
+    )
+
+    return winners_df
 
 def merge_silver(spark, silver_path, winners_df):
     """TODO 3 (T3). Mutate an existing Delta table; return None.

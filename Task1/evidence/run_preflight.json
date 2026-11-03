@@ -1,11 +1,11 @@
 {
-  "run_id": "813500a2-e22e-4297-a541-d9ee911aabb9",
+  "run_id": "b72bde97-81ce-4ccc-b934-bb95af143c8f",
   "job": "preflight",
   "status": "COMPLETE",
   "input_manifest_sha256": "3cdfc84b26d290100b39ce65d4ff7cb22839f4021b9caf26897c8a4ff68091a2",
-  "implementation_sha256": "9bf4bb5788e8b855572bde4b65972b2669df963bd54c3d83b18e05cd6415066c",
-  "scaffold_sha256": "530debbdc30010ab0dd9f082224b3666749e626525f14a9e3a0a8a7c120d6ccf",
+  "implementation_sha256": "d3196e7cc6c59fc641230d8972f567807a86d54909bed9a4135f9f69cb409878",
+  "scaffold_sha256": "9f0d4728ce00a10f09b7544b19209ed920d21af4c03e07025e9bd9412118b8c9",
   "outputs": [
-    "/tmp/lab3-lakehouse/g01/attempt01/preflight-813500a2-e22e-4297-a541-d9ee911aabb9"
+    "/tmp/lab3-lakehouse/g01/attempt01/preflight-b72bde97-81ce-4ccc-b934-bb95af143c8f"
   ]
 }
