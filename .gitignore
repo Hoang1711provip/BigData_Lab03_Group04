@@ -9,3 +9,8 @@ metastore_db/
 .checkpoint/
 .DS_Store
 Thumbs.db
+
+.venv/
+__pycache__/
+*.pyc
+*.bak

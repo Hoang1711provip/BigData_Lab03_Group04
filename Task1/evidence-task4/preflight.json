@@ -1,0 +1,7 @@
+{
+  "status": "PASS",
+  "delta_smoke_path": "D:/STUDY/BigData/lab3-lakehouse-group04/group04/group04-windows-20261106/preflight-e89c3dc2-f9be-4cd9-b9cd-47a3289727f1",
+  "fixture_rows": 9610,
+  "new_batch_rows": 140,
+  "implementation_file": "student_impl.py"
+}

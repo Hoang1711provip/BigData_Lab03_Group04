@@ -1,0 +1,126 @@
+{
+  "partition_tasks": [
+    {
+      "host": "DESKTOP-3PA936N",
+      "pid": 408,
+      "partition": 0
+    },
+    {
+      "host": "DESKTOP-3PA936N",
+      "pid": 26328,
+      "partition": 1
+    },
+    {
+      "host": "DESKTOP-3PA936N",
+      "pid": 19292,
+      "partition": 2
+    },
+    {
+      "host": "DESKTOP-3PA936N",
+      "pid": 8920,
+      "partition": 3
+    },
+    {
+      "host": "DESKTOP-3PA936N",
+      "pid": 20576,
+      "partition": 4
+    },
+    {
+      "host": "DESKTOP-3PA936N",
+      "pid": 29768,
+      "partition": 5
+    },
+    {
+      "host": "DESKTOP-3PA936N",
+      "pid": 29792,
+      "partition": 6
+    },
+    {
+      "host": "DESKTOP-3PA936N",
+      "pid": 30040,
+      "partition": 7
+    },
+    {
+      "host": "DESKTOP-3PA936N",
+      "pid": 29284,
+      "partition": 8
+    },
+    {
+      "host": "DESKTOP-3PA936N",
+      "pid": 20500,
+      "partition": 9
+    },
+    {
+      "host": "DESKTOP-3PA936N",
+      "pid": 21984,
+      "partition": 10
+    },
+    {
+      "host": "DESKTOP-3PA936N",
+      "pid": 7732,
+      "partition": 11
+    },
+    {
+      "host": "DESKTOP-3PA936N",
+      "pid": 12380,
+      "partition": 12
+    },
+    {
+      "host": "DESKTOP-3PA936N",
+      "pid": 3808,
+      "partition": 13
+    },
+    {
+      "host": "DESKTOP-3PA936N",
+      "pid": 27456,
+      "partition": 14
+    },
+    {
+      "host": "DESKTOP-3PA936N",
+      "pid": 17904,
+      "partition": 15
+    },
+    {
+      "host": "DESKTOP-3PA936N",
+      "pid": 4804,
+      "partition": 16
+    },
+    {
+      "host": "DESKTOP-3PA936N",
+      "pid": 16076,
+      "partition": 17
+    },
+    {
+      "host": "DESKTOP-3PA936N",
+      "pid": 10116,
+      "partition": 18
+    },
+    {
+      "host": "DESKTOP-3PA936N",
+      "pid": 13572,
+      "partition": 19
+    },
+    {
+      "host": "DESKTOP-3PA936N",
+      "pid": 20420,
+      "partition": 20
+    },
+    {
+      "host": "DESKTOP-3PA936N",
+      "pid": 4912,
+      "partition": 21
+    },
+    {
+      "host": "DESKTOP-3PA936N",
+      "pid": 13876,
+      "partition": 22
+    },
+    {
+      "host": "DESKTOP-3PA936N",
+      "pid": 6668,
+      "partition": 23
+    }
+  ],
+  "distinct_hosts": 1,
+  "interpretation": "Distinct hosts demonstrate placements, not distinct physical servers. Keep Spark UI/event-log evidence too."
+}

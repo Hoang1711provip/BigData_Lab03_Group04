@@ -1,0 +1,11 @@
+{
+  "group_id": "group04",
+  "run_label": "group04-windows-20261106",
+  "store_id": "local-course-fixture",
+  "spark_master": "local[2]",
+  "lakehouse_root": "D:/STUDY/BigData/lab3-lakehouse-group04",
+  "evidence_dir": "evidence-windows-group04-20261106",
+  "shuffle_partitions": 8,
+  "benchmark_copies": 100,
+  "extra_maven_packages": []
+}

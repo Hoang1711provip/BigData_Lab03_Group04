@@ -1,0 +1,12 @@
+{
+  "run_id": "7bb732a3-b963-4046-9529-20a87b6140e4",
+  "job": "benchmark",
+  "status": "COMPLETE",
+  "input_manifest_sha256": "3cdfc84b26d290100b39ce65d4ff7cb22839f4021b9caf26897c8a4ff68091a2",
+  "implementation_sha256": "69ef11e00ada815d4f7270edaf81b156104ff0f0a99aa342fe7ad1e325d904d1",
+  "scaffold_sha256": "b81c645908963e26f3bc420302c354dbf36ac3cf9dd5bbeae97d2bce83683692",
+  "outputs": [
+    "D:/STUDY/BigData/lab3-lakehouse-group04/group04/group04-windows-20261106/benchmarks/7bb732a3-b963-4046-9529-20a87b6140e4/unpartitioned",
+    "D:/STUDY/BigData/lab3-lakehouse-group04/group04/group04-windows-20261106/benchmarks/7bb732a3-b963-4046-9529-20a87b6140e4/date_partitioned"
+  ]
+}

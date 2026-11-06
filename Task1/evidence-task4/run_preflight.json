@@ -1,0 +1,11 @@
+{
+  "run_id": "e89c3dc2-f9be-4cd9-b9cd-47a3289727f1",
+  "job": "preflight",
+  "status": "COMPLETE",
+  "input_manifest_sha256": "3cdfc84b26d290100b39ce65d4ff7cb22839f4021b9caf26897c8a4ff68091a2",
+  "implementation_sha256": "4b883e0549376c4f868f1febdb1fe6e5a6f8e1fa5ef136aa8dfa8dfd70165770",
+  "scaffold_sha256": "b2d163aeeb4d8823598c89a2f2bb5eac23c1ffafb3096e7c4e2473f4a7c9c21d",
+  "outputs": [
+    "D:/STUDY/BigData/lab3-lakehouse-group04/group04/group04-windows-20261106/preflight-e89c3dc2-f9be-4cd9-b9cd-47a3289727f1"
+  ]
+}

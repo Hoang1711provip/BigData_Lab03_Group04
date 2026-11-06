@@ -1,0 +1,18 @@
+{
+  "scope": "Read-only verification of actual Delta snapshots",
+  "silver_path": "D:/STUDY/BigData/lab3-lakehouse-group04/group04/group04-windows-20261106/tables/silver",
+  "silver_version": 1,
+  "silver_replay_version": 2,
+  "gold_path": "D:/STUDY/BigData/lab3-lakehouse-group04/group04/group04-windows-20261106/tables/gold",
+  "gold_version": 1,
+  "gold_groups": 20,
+  "gold_recomputation_passed": true,
+  "silver_live_replay_passed": true,
+  "bronze_path": "D:/STUDY/BigData/lab3-lakehouse-group04/group04/group04-windows-20261106/tables/bronze",
+  "bronze_before_replay_version": 1,
+  "bronze_latest_version_at_verification": 1,
+  "bronze_rows": 9750,
+  "bronze_full_content_equal": true,
+  "duplicate_receipt_keys": 0,
+  "note": "Bronze comparison uses the latest version at verification time. Run immediately after incremental, before any subsequent batches. Gold is recomputed using the current build_gold implementation."
+}

@@ -120,23 +120,118 @@ def merge_silver(spark, silver_path, winners_df):
 
 
 def benchmark_query(df):
-    """TODO 4 (T4). Both layouts must evaluate exactly this query:
-    filter event_date = DATE '2026-02-06'; group by site; return
-    site, n_observations, sum_temperature_c (decimal(18,2)), n_late.
-    Do not use replica_id in the GROUP BY. Do not call collect() here.
-    The supplied runner materializes this bounded aggregate for timing.
-    """
-    raise NotImplementedError('TODO 4: benchmark_query')
+    """Benchmark query for both data layouts."""
 
+    result = (
+        df
+        .filter(
+            F.col("event_date") == F.lit("2026-02-06").cast("date")
+        )
+        .groupBy("site")
+        .agg(
+            F.count("*")
+             .cast("BIGINT")
+             .alias("n_observations"),
+
+            F.sum("temperature_c")
+             .cast("DECIMAL(18,2)")
+             .alias("sum_temperature_c"),
+
+            F.sum(
+                F.when(F.col("is_late") == True, 1).otherwise(0)
+            )
+             .cast("BIGINT")
+             .alias("n_late")
+        )
+        .select(
+            "site",
+            "n_observations",
+            "sum_temperature_c",
+            "n_late"
+        )
+    )
+
+    return result
 
 def validate_release_binding(draft, expected):
-    """TODO 5 (T5). Return (passed: bool, reasons: list[str]).
-    Require nonempty author, reviewer, steward and reviewer != author.
-    Bind handoff_logical_sha256, code_sha256, silver_path, silver_version,
-    gold_path, gold_version and gold_source_silver_version to expected.
-    Also require draft.gold_source_silver_version == draft.silver_version.
-    Rejection reasons: REVIEW, METADATA, VERSION_BINDING, CODE_BINDING,
-    or HANDOFF_BINDING. Missing keys must reject, never crash/pass.
-    This is a course release check, not a digital signature or IAM control.
-    """
-    raise NotImplementedError('TODO 5: validate_release_binding')
+    reasons = []
+
+    if not isinstance(draft, dict):
+        draft = {}
+
+    if not isinstance(expected, dict):
+        expected = {}
+
+    MISSING = object()
+
+    def get_value(data, key):
+        return data.get(key, MISSING)
+
+    def is_nonempty(value):
+        return isinstance(value, str) and bool(value.strip())
+
+    # Check metadata
+    author = get_value(draft, "author")
+    reviewer = get_value(draft, "reviewer")
+    steward = get_value(draft, "steward")
+
+    if not is_nonempty(author) or not is_nonempty(steward):
+        reasons.append("METADATA")
+
+    if (
+        not is_nonempty(reviewer)
+        or not is_nonempty(author)
+        or reviewer == author
+    ):
+        reasons.append("REVIEW")
+
+    # Check handoff binding
+    key = "handoff_logical_sha256"
+    if (
+        get_value(draft, key) is MISSING
+        or get_value(expected, key) is MISSING
+        or get_value(draft, key) != get_value(expected, key)
+    ):
+        reasons.append("HANDOFF_BINDING")
+
+    # Check code binding
+    key = "code_sha256"
+    if (
+        get_value(draft, key) is MISSING
+        or get_value(expected, key) is MISSING
+        or get_value(draft, key) != get_value(expected, key)
+    ):
+        reasons.append("CODE_BINDING")
+
+    # Check version and path binding
+    version_keys = [
+        "silver_path",
+        "silver_version",
+        "gold_path",
+        "gold_version",
+        "gold_source_silver_version"
+    ]
+
+    version_mismatch = any(
+        get_value(draft, key) is MISSING
+        or get_value(expected, key) is MISSING
+        or get_value(draft, key) != get_value(expected, key)
+        for key in version_keys
+    )
+
+    silver_version = get_value(draft, "silver_version")
+    gold_source_version = get_value(
+        draft, "gold_source_silver_version"
+    )
+
+    if (
+        silver_version is MISSING
+        or gold_source_version is MISSING
+        or gold_source_version != silver_version
+    ):
+        version_mismatch = True
+
+    if version_mismatch:
+        reasons.append("VERSION_BINDING")
+
+    return (len(reasons) == 0, reasons)

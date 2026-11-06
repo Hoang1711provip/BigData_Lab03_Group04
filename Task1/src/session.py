@@ -8,7 +8,12 @@ def make_spark(config):
     from pyspark.sql import SparkSession
     from delta import configure_spark_with_delta_pip
     master=config['spark_master']
+    python_exe = os.environ.get('PYSPARK_PYTHON') or os.sys.executable
+    os.environ['PYSPARK_PYTHON'] = python_exe
+    os.environ['PYSPARK_DRIVER_PYTHON'] = python_exe
     b=(SparkSession.builder.appName('Lab3-Lakehouse-'+config['group_id']).master(master)
+       .config('spark.pyspark.python', python_exe)
+       .config('spark.pyspark.driver.python', python_exe)
        .config('spark.sql.extensions','io.delta.sql.DeltaSparkSessionExtension')
        .config('spark.sql.catalog.spark_catalog','org.apache.spark.sql.delta.catalog.DeltaCatalog')
        .config('spark.sql.session.timeZone','UTC')
@@ -17,7 +22,6 @@ def make_spark(config):
        .config('spark.sql.shuffle.partitions',str(config.get('shuffle_partitions',8)))
        .config('spark.databricks.delta.schema.autoMerge.enabled','false')
        .config('spark.databricks.delta.snapshotPartitions','2')
-       .config('spark.redaction.regex','(?i)secret|password|token|access[.]?key|credential')
        .config('spark.ui.enabled','true'))
     if config.get('event_log_dir'):
         b=b.config('spark.eventLog.enabled','true').config('spark.eventLog.dir',config['event_log_dir'])
