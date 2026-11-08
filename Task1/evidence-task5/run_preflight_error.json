@@ -1,0 +1,7 @@
+{
+  "run_id": "278430ee-bc49-4240-ac3f-e66a7205a13f",
+  "job": "preflight",
+  "status": "FAIL",
+  "error_type": "Py4JJavaError",
+  "message": "An error occurred while calling z:org.apache.spark.api.python.PythonRDD.collectAndServe.\n: org.apache.spark.SparkException: Job aborted due to stage failure: Task 0 in stage 0.0 failed 1 times, most recent failure: Lost task 0.0 in stage 0.0 (TID 0) (DESKTOP-NKO8GJ2 executor driver): org.apache.spark.SparkException: Python worker exited unexpectedly (crashed). Consider setting 'spark.sql.execution.pyspark.udf.faulthandler.enabled' or'spark.python.worker.faulthandler.enabled' configuration to 'tr"
+}

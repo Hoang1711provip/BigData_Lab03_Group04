@@ -1,0 +1,23 @@
+{
+  "release_id": "lab3-group04-group04-task5-local-01",
+  "author": "A",
+  "reviewer": "B",
+  "steward": "C",
+  "handoff_logical_sha256": "c50f8252bfb91890975d26b16fe1d2b32f0e283a58e46bd16260b4a3cca0bf0d",
+  "handoff_kind": "course_fallback_not_student_approval",
+  "trusted_manifest_sha256": "95798136e770d61dc835095f6b5b4f09805dcb48f2133a7ceefa950728d29a5d",
+  "code_sha256": "ef988d0e789645d0b4a1e299e2a64df9945f06cf03154bd04acfa9dfaac2a7c5",
+  "silver_path": "D:/BigData_Lab03_Group04_task5_data/group04/group04-task5-local-01/tables/silver",
+  "silver_version": 1,
+  "gold_path": "D:/BigData_Lab03_Group04_task5_data/group04/group04-task5-local-01/tables/gold",
+  "gold_version": 1,
+  "gold_source_silver_version": 1,
+  "as_of": "2026-02-09T00:00:00Z",
+  "timezone": "UTC",
+  "known_limitations": [
+    "Synthetic fixture only.",
+    "Inherited QA sample disagreements are not repaired.",
+    "A version tuple is a release protocol, not a cross-table transaction."
+  ],
+  "release_validator_sha256": "ef988d0e789645d0b4a1e299e2a64df9945f06cf03154bd04acfa9dfaac2a7c5"
+}

@@ -1,0 +1,7 @@
+{
+  "status": "PASS",
+  "delta_smoke_path": "D:/BigData_Lab03_Group04_task5_data/group04/group04-task5-local-01/preflight-f3df2995-95d8-4662-8ae0-7917496ec194",
+  "fixture_rows": 9610,
+  "new_batch_rows": 140,
+  "implementation_file": "student_impl.py"
+}

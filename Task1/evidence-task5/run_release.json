@@ -1,0 +1,11 @@
+{
+  "run_id": "56b019f7-c247-449d-8dde-f83cf5aebe43",
+  "job": "release",
+  "status": "COMPLETE",
+  "input_manifest_sha256": "95798136e770d61dc835095f6b5b4f09805dcb48f2133a7ceefa950728d29a5d",
+  "implementation_sha256": "ef988d0e789645d0b4a1e299e2a64df9945f06cf03154bd04acfa9dfaac2a7c5",
+  "scaffold_sha256": "7779ede4fbd84d7ac21f797e05e0aeb0850a4bbc0a3dbf85226158751af37400",
+  "outputs": [
+    "evidence-task5\\release_candidate"
+  ]
+}

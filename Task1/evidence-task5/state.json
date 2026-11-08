@@ -1,0 +1,24 @@
+{
+  "group_id": "group04",
+  "run_label": "group04-task5-local-01",
+  "handoff_kind": "course_fallback_not_student_approval",
+  "handoff_logical_sha256": "c50f8252bfb91890975d26b16fe1d2b32f0e283a58e46bd16260b4a3cca0bf0d",
+  "trusted_manifest_sha256": "95798136e770d61dc835095f6b5b4f09805dcb48f2133a7ceefa950728d29a5d",
+  "bronze_path": "D:/BigData_Lab03_Group04_task5_data/group04/group04-task5-local-01/tables/bronze",
+  "silver_path": "D:/BigData_Lab03_Group04_task5_data/group04/group04-task5-local-01/tables/silver",
+  "gold_path": "D:/BigData_Lab03_Group04_task5_data/group04/group04-task5-local-01/tables/gold",
+  "bronze_initial_version": 0,
+  "silver_initial_version": 0,
+  "gold_initial_version": 0,
+  "silver_final_version": 1,
+  "gold_final_version": 1,
+  "gold_source_silver_version": 1,
+  "initial_implementation_sha256": "ef988d0e789645d0b4a1e299e2a64df9945f06cf03154bd04acfa9dfaac2a7c5",
+  "run_ids": {
+    "bootstrap": "4be5a0e3-c693-49e8-a862-732343f7b536",
+    "incremental": "4fb24c45-8ba6-4ebf-a39a-757b4d5ecac5"
+  },
+  "bronze_final_version": 1,
+  "silver_replay_version": 2,
+  "final_implementation_sha256": "ef988d0e789645d0b4a1e299e2a64df9945f06cf03154bd04acfa9dfaac2a7c5"
+}

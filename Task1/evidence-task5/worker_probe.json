@@ -1,0 +1,126 @@
+{
+  "partition_tasks": [
+    {
+      "host": "DESKTOP-NKO8GJ2",
+      "pid": 18548,
+      "partition": 0
+    },
+    {
+      "host": "DESKTOP-NKO8GJ2",
+      "pid": 17516,
+      "partition": 1
+    },
+    {
+      "host": "DESKTOP-NKO8GJ2",
+      "pid": 11984,
+      "partition": 2
+    },
+    {
+      "host": "DESKTOP-NKO8GJ2",
+      "pid": 9696,
+      "partition": 3
+    },
+    {
+      "host": "DESKTOP-NKO8GJ2",
+      "pid": 12536,
+      "partition": 4
+    },
+    {
+      "host": "DESKTOP-NKO8GJ2",
+      "pid": 13780,
+      "partition": 5
+    },
+    {
+      "host": "DESKTOP-NKO8GJ2",
+      "pid": 11372,
+      "partition": 6
+    },
+    {
+      "host": "DESKTOP-NKO8GJ2",
+      "pid": 19796,
+      "partition": 7
+    },
+    {
+      "host": "DESKTOP-NKO8GJ2",
+      "pid": 14408,
+      "partition": 8
+    },
+    {
+      "host": "DESKTOP-NKO8GJ2",
+      "pid": 2076,
+      "partition": 9
+    },
+    {
+      "host": "DESKTOP-NKO8GJ2",
+      "pid": 8820,
+      "partition": 10
+    },
+    {
+      "host": "DESKTOP-NKO8GJ2",
+      "pid": 6124,
+      "partition": 11
+    },
+    {
+      "host": "DESKTOP-NKO8GJ2",
+      "pid": 7636,
+      "partition": 12
+    },
+    {
+      "host": "DESKTOP-NKO8GJ2",
+      "pid": 2652,
+      "partition": 13
+    },
+    {
+      "host": "DESKTOP-NKO8GJ2",
+      "pid": 17332,
+      "partition": 14
+    },
+    {
+      "host": "DESKTOP-NKO8GJ2",
+      "pid": 12384,
+      "partition": 15
+    },
+    {
+      "host": "DESKTOP-NKO8GJ2",
+      "pid": 22936,
+      "partition": 16
+    },
+    {
+      "host": "DESKTOP-NKO8GJ2",
+      "pid": 23500,
+      "partition": 17
+    },
+    {
+      "host": "DESKTOP-NKO8GJ2",
+      "pid": 5656,
+      "partition": 18
+    },
+    {
+      "host": "DESKTOP-NKO8GJ2",
+      "pid": 11744,
+      "partition": 19
+    },
+    {
+      "host": "DESKTOP-NKO8GJ2",
+      "pid": 15868,
+      "partition": 20
+    },
+    {
+      "host": "DESKTOP-NKO8GJ2",
+      "pid": 22864,
+      "partition": 21
+    },
+    {
+      "host": "DESKTOP-NKO8GJ2",
+      "pid": 12392,
+      "partition": 22
+    },
+    {
+      "host": "DESKTOP-NKO8GJ2",
+      "pid": 10612,
+      "partition": 23
+    }
+  ],
+  "distinct_hosts": 1,
+  "interpretation": "Distinct hosts demonstrate placements, not distinct physical servers. Keep Spark UI/event-log evidence too."
+}
