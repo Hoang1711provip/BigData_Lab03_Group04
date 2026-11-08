@@ -1,5 +1,5 @@
-Task1/evidence-task5/release_candidate/*.json -text
-Task1/evidence-task5/code_versions/*.py -text
-Task1/evidence-task5/trusted_manifest_used_windows.json -text
+Task5/evidence/release_candidate/*.json -text
+Task5/evidence/code_versions/*.py -text
+Task5/evidence/trusted_manifest_used_windows.json -text
 Task1/templates/student_impl.py -text
 Task1/trusted_lab3_inputs.json text eol=lf
